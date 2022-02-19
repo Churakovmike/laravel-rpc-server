@@ -1,0 +1,38 @@
+{
+    "name": "churakovmike/laravel-rpc-server",
+    "type": "library",
+    "description": "Laravel rpc server",
+    "keywords": [
+        "laravel rpc",
+        "laravel rpc server",
+        "rpc server"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Churakov Mike",
+            "email": "churakovmike@mail.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ChurakovMike\\LaravelRpcServer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ChurakovMike\\LaravelRpcServer\\Tests\\": "tests"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.1"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0|^9.3",
+        "vimeo/psalm": "4.x-dev"
+    }
+}
