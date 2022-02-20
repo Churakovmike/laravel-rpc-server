@@ -4,13 +4,18 @@ declare(strict_types=1);
 
 namespace ChurakovMike\LaravelRpcServer;
 
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Psr\Http\Message\ResponseInterface;
 
 class HttpHandler
 {
-    public function handle(Request $request, array $procedures, string $delimiter = null): ResponseInterface
+    public function handle(Request $request, array $procedures, string $delimiter = null): JsonResponse
     {
-        return dd($request, $procedures, $delimiter, 'хендле');
+        return new JsonResponse([
+            'jsonrpc' => '2.0',
+            'result' => [],
+            'error' => '',
+            'id' => '',
+        ]);
     }
 }
