@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ChurakovMike\LaravelRpcServer;
+namespace ChurakovMike\LaravelRpcServer\Errors;
 
 use ChurakovMike\LaravelRpcServer\Exceptions\JsonRpcException;
 
