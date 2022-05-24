@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace ChurakovMike\LaravelRpcServer\Enums;
 
-enum RpsResponseCodes: int
+enum RpcResponseCodes: int
 {
     case PARSE_ERROR = -32700;
     case INVALID_REQUEST = -32600;

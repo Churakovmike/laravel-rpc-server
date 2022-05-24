@@ -22,6 +22,8 @@ class HttpHandler
     public function handle(JsonRpcRequest $request, $procedures)
     {
         try {
+            throw new JsonRpcException('qwe');
+
             $response = $this->resolver->resolve($request->getContent(), $procedures);
             $response = $this->procedureExecutor->execute(self::class);
         } catch (JsonRpcException $exception) {

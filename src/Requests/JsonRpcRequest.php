@@ -10,4 +10,9 @@ class JsonRpcRequest extends FormRequest
     {
         return [];
     }
+
+    public function getId(): ?int
+    {
+        return $this->input('id');
+    }
 }
