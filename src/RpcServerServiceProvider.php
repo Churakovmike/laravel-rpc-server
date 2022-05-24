@@ -16,6 +16,9 @@ class RpcServerServiceProvider extends ServiceProvider
 
     public function register(): void
     {
-        Route::macro('rpc', fn(string $uri) => Route::post($uri, [HttpHandler::class, 'handle']));
+        Route::macro('rpc', fn(string $uri, array $procedures = []) => Route::any($uri, [HttpHandler::class, 'handle'])
+            ->setDefaults([
+                'procedures' => $procedures,
+            ]));
     }
 }
