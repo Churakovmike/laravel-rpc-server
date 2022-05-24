@@ -8,6 +8,5 @@ class ProcedureExecutor
 {
     public function execute(string $className, string $method = '_invoke')
     {
-
     }
 }

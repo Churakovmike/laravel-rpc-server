@@ -10,8 +10,7 @@ class ProcedureResolver
 {
     public function __construct(
         private readonly RequestParser $parser,
-    ) {
-    }
+    ) {}
 
     public function resolve(string $content = '', array $procedures = [])
     {

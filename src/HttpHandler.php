@@ -25,15 +25,10 @@ class HttpHandler
             $response = $this->resolver->resolve($request->getContent(), $procedures);
             $response = $this->procedureExecutor->execute(self::class);
         } catch (JsonRpcException $exception) {
-            return $this->buildResponse($this->errorHandler->render($request, $exception));
+            return $this->errorHandler->render($request, $exception);
         }
 
         return $this->composeResponse();
-    }
-
-    protected function buildResponse(array $data): JsonResponse
-    {
-        return new JsonResponse();
     }
 
     protected function composeResponse()
